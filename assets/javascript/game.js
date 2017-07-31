@@ -31,11 +31,13 @@ $(document).ready(function() {
 
             var Image = $("<img>");
 
+
             Image.attr("src", results[i].images.fixed_height_still.url);
             Image.attr("data-still",results[i].images.fixed_height_still.url);
             Image.attr("data-animate", results[i].images.fixed_height.url)
             Image.attr("data-state", "still");
             Image.addClass('pause');
+
 
 
             gifDiv.prepend(p);
@@ -78,6 +80,7 @@ $(document).ready(function() {
 			gifBtn.attr('gifName', gifsArray[i])
 
 			gifBtn.text(gifsArray[i]);
+			gifBtn.addClass("a");
 
 			
 

@@ -20,6 +20,12 @@ h2{
 	text-shadow: 0.1em 0.1em 0.2em black;
 }
 
-.a { color: #00c; }
-.a:visited { magenta; }
-.a:focused { magenta; }
+.a { background: white; }
+.a:active { 
+    background-color: magenta;
+}
+.a:hover {font-size: 125%;}
+
+h3{
+		text-shadow: 0.1em 0.1em 0.2em black;
+}
