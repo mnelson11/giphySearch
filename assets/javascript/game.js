@@ -71,6 +71,8 @@ $(document).ready(function() {
 
 	function renderButton(){
 
+		$("#gif-input").val('');
+
 		$("#buttons-view").empty();
 
 		for(var i=0; i<gifsArray.length; i++){
@@ -86,7 +88,7 @@ $(document).ready(function() {
 
 			$("#buttons-view").append(gifBtn);	
 
-			$("#gif-input").empty();
+			
 		
 
 		}

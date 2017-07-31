@@ -11,7 +11,7 @@ body{
 }
 
 h1{
-	font-size: 50px;
+	font-family: 'Pacifico', cursive;	font-size: 60px;
 	text-shadow: 0.1em 0.1em 0.2em magenta;
 
 }
@@ -24,8 +24,16 @@ h2{
 .a:active { 
     background-color: magenta;
 }
-.a:hover {font-size: 125%;}
+.a:hover {font-size: 125%;
+		background: magenta;
+}
+
 
 h3{
 		text-shadow: 0.1em 0.1em 0.2em black;
+}
+
+#gif-input{
+	color: magenta;
+	font-weight: bold;
 }
