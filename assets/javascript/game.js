@@ -1,13 +1,15 @@
 
 $(document).ready(function() {
-	var gifsArray = ["raccoon", "dog"];
+	var gifsArray = ["cat", "robot", "raccoon"];
 
 
 	function displayGif(){
-		$('gifs-appear-here').empty();
-		var gifName = $(this).attr("gifName");
 
-     	 var queryURL = "http://api.giphy.com/v1/gifs/search?q=" +
+		var gifName = $(this).attr("gifName");
+		$('#gifs-appear-here').text("");
+		
+
+     	var queryURL = "http://api.giphy.com/v1/gifs/search?q=" +
         gifName + "&api_key=dc6zaTOxFJmzC&limit=10";
 
       	$.ajax({
@@ -28,16 +30,38 @@ $(document).ready(function() {
             var p = $("<p>").text("Rating: " + rating);
 
             var Image = $("<img>");
-            Image.attr("src", results[i].images.fixed_height.url);
+
+            Image.attr("src", results[i].images.fixed_height_still.url);
+            Image.attr("data-still",results[i].images.fixed_height_still.url);
+            Image.attr("data-animate", results[i].images.fixed_height.url)
+            Image.attr("data-state", "still");
+            Image.addClass('pause');
+
 
             gifDiv.prepend(p);
             gifDiv.prepend(Image);
 
+
             $("#gifs-appear-here").prepend(gifDiv);
-            console.log(gifName);
         	}
 
           });
+        $(document).on("click", ".pause", function(){
+
+        	var state = $(this).attr("data-state");
+        	// If the clicked image's state is still, update its src attribute to what its data-animate value is.
+     		// Then, set the image's data-state to animate
+     		// Else set src to the data-still value
+     		if (state === "still") {
+		        $(this).attr("src", $(this).attr("data-animate"));
+		        $(this).attr("data-state", "animate");
+		      } else {
+		        $(this).attr("src", $(this).attr("data-still"));
+		        $(this).attr("data-state", "still");
+		      }
+
+        	
+        })
 		
 	}
 
@@ -55,7 +79,12 @@ $(document).ready(function() {
 
 			gifBtn.text(gifsArray[i]);
 
-			$("#buttons-view").append(gifBtn);			
+			
+
+			$("#buttons-view").append(gifBtn);	
+
+			$("#gif-input").empty();
+		
 
 		}
 	}
