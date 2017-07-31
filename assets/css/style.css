@@ -1,9 +1,9 @@
 body{
 	text-align: center;
-	background: url("../images/6390-funny-wallpaper-cat.jpg");
+	background: url("../images/XKRcfhs.jpg");
 	background-repeat: no-repeat;
     background-attachment: fixed;
-	color: white;
+	color: lightgrey;
 	
 }
 .container{
@@ -12,6 +12,14 @@ body{
 
 h1{
 	font-size: 50px;
-	text-shadow: 1px 1px 0px #ededed, 4px 4px 0px rgba(0,0,0,0.15);
+	text-shadow: 0.1em 0.1em 0.2em magenta;
 
 }
+
+h2{
+	text-shadow: 0.1em 0.1em 0.2em black;
+}
+
+.a { color: #00c; }
+.a:visited { magenta; }
+.a:focused { magenta; }
