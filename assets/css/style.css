@@ -18,22 +18,41 @@ h1{
 
 h2{
 	text-shadow: 0.1em 0.1em 0.2em black;
+	font-family: 'Indie Flower', cursive;
+	border: 1px, dashed;
+
 }
 
 .a { background: white; }
 .a:active { 
     background-color: magenta;
 }
-.a:hover {font-size: 125%;
+.a:hover {font-size: 150%;
 		background: magenta;
+		color:black;
+}
+.a{
+	font-size: 15px;
+	font-weight: bold;
+	border: 1px, dashed;
+	background: transparent;
+	color: magenta;
+	margin:5px;
+	font-family: 'Indie Flower', cursive;
+
 }
 
 
 h3{
 		text-shadow: 0.1em 0.1em 0.2em black;
+
+
+		
 }
 
 #gif-input{
+	font-family: 'Indie Flower', cursive;
+
 	color: magenta;
 	font-weight: bold;
 }
